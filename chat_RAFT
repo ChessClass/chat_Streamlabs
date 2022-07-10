@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    text-shadow: 2px 1px 2px black;
+    background: {background_color};
+    font-family: 'Alumni Sans', sans-serif;
+    font-weight: 700;
+    font-size: {font_size};
+    line-height: 1em;
+    color: {text_color};
+  }
+
+#log>div {
+    animation: fadeInUp 0.8s ease forwards, fadeOutUp 0.8s ease {message_hide_delay} forwards;
+    -webkit-animation: fadeInUp 0.8s ease forwards, fadeOutUp 0.8s ease {message_hide_delay} forwards;
+    background: RGB(14, 66, 89, 0.85);
+    margin-bottom: 0.2em;
+    border: 0.4em solid;
+    border-color: RGB(0,0,0,0) RGB(0,0,0,0) RGB(33, 90, 120, 1) RGB(0,0,0,0);
+    padding: 5px 5px;
+    overflow: hidden;
+}
+
+.colon {
+    display: none;
+}
+
+#log {
+    display: table;
+    position: absolute;
+  	bottom: 0.001%;
+  	left: 0.001%;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#log>div {
+    display: block;
+}
+
+#log>div.deleted {
+    visibility: hidden;
+}
+
+#log .emote {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0.2em 0.2em;
+    position: relative;
+}
+
+#log .emote img {
+    display: inline-block;
+    height: 1em;
+    opacity: 0;
+}
+
+#log .message,#log .meta {
+    vertical-align: middle;
+    display: run-in;
+}
+
+#log .meta {
+    width: 35%;
+    text-align: right;
+    padding-right: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#log .message {
+    word-wrap: break-word;
+    width: 65%;
+}
+
+.badge {
+    display: inline-block;
+    margin-right: 1px;
+    margin-left: 1px;
+    position: static;
+    height: 1em;
+    vertical-align: middle;
+}
+
+.name {
+    margin-left: 0.2em;
+    color: {background_color};
+}
